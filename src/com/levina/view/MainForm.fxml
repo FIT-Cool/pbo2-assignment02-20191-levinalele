@@ -33,8 +33,8 @@
                         <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#saveAction" text="Save" />
-                              <Button mnemonicParsing="false" onAction="#risetAction" text="Riset" />
+                              <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveAction" text="Save" />
+                              <Button fx:id="btnRiset" mnemonicParsing="false" onAction="#risetAction" text="Riset" />
                               <Button fx:id="btnUpdate" disable="true" mnemonicParsing="false" onAction="#updateAction" text="Update" />
                            </children>
                            <padding>
@@ -61,7 +61,7 @@
                      <children>
                         <TextField fx:id="txtCategoryName" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" />
                         <Label text="Category name" />
-                        <Button mnemonicParsing="false" onAction="#savecategoryAction" text="Save Category" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                        <Button fx:id="btnSaveCategory" mnemonicParsing="false" onAction="#savecategoryAction" text="Save Category" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </GridPane.margin>
@@ -73,7 +73,7 @@
                   </GridPane>
                </children>
             </HBox>
-            <TableView onMouseClicked="#tableClicked" prefHeight="255.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="tableDepartment" onMouseClicked="#tableClicked" prefHeight="255.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
               <columns>
                 <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
                 <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
